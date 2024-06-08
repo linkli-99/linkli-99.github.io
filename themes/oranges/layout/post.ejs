@@ -30,11 +30,38 @@
   <% if(page.type === "about") { %>
   <!-- 关于页 url形式：https://yoursite/about/ -->
     <div class="container about-index">
-      <div class="markdown-body">
-        <%- page.content %>
+      <div class="about-body">
+        <div class="markdown-body">
+          <%- page.content %>
+        </div>
+        <img src="/images/uploads/profile.jpg" alt="Profile Picture" class="right-image">
       </div>
     </div>
   <% } %>
+
+  
+<% if (page.type === "moments" && page.photos && page.photos.length > 0) { %>
+  <div class="container moments-index">
+    <% page.photos.forEach(function(photo, index) { %>
+      <div class="moment-item" style="background-image: url('<%= photo.thumbnail %>');" data-fullsize="<%= photo.fullsize %>" 
+        data-caption="<%- photo.caption %>"
+        onclick="openFullscreen(this)">
+      </div>
+    <% }) %>
+  </div>
+
+  <!-- Fullscreen modal for images -->
+  <div id="fullscreenModal" class="modal">
+    <span class="close" onclick="closeFullscreen()">&times;</span>
+    <img class="modal-content" id="fullscreenImage">
+    <div id="caption"></div>
+  </div>
+
+<% } else if (page.type === "moments") { %>
+  <div class="container moments-index">
+    <p>No photos available.</p>
+  </div>
+<% } %>
 
   <% if (!page.type) { %>
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
@@ -144,4 +171,8 @@
       </div>
     <% } %>
   </div>
+  <!-- <%- js(['/js/modal.js']) %> -->
 <% } %>
+<script src="<%= url_for('/js/modal.js') %>"></script>
+
+

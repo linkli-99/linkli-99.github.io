@@ -1,0 +1,106 @@
+# https://decapcms.org/docs/configuration-options/
+backend:
+  name: github
+  repo: linkli-99/linkli-99.github.io
+  branch: main
+  auth_type: implicit
+  app_id: Ov23li4tEqVFuzADunIZ
+media_folder: "source/images/uploads"
+public_folder: "/images/uploads"
+site_url: "https://linkli-99.github.io"
+# logo_url: "https://www.imaegoo.com/images/logo.png"
+# locale: "zh_Hans"
+# common_col_conf: &common_col_conf
+#   create: true
+#   slug: "{{fields.slug}}"
+#   # https://decapcms.org/docs/widgets/
+#   fields:
+#     - label: "File Name"
+#       name: "filename"
+#       widget: "string"
+#     - label: "Title"
+#       name: "title"
+#       widget: "string"
+#     - label: "Date"
+#       name: "date"
+#       widget: "datetime"
+#       format: "YYYY-MM-DD HH:mm:ss"
+#       date_format: "YYYY-MM-DD"
+#       time_format: "HH:mm:ss"
+#     - label: "Update Date"
+#       name: "updated"
+#       widget: "datetime"
+#       format: "YYYY-MM-DD HH:mm:ss"
+#       date_format: "YYYY-MM-DD"
+#       time_format: "HH:mm:ss"
+#       required: false
+#     - label: "Cover"
+#       name: "cover"
+#       widget: "image"
+#       required: false
+#     - label: "Body"
+#       name: "body"
+#       widget: "markdown"
+#     - label: "Comments"
+#       name: "comments"
+#       widget: "boolean"
+#       default: true
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "source/_posts"
+    create: true
+    slug: "{{fields.slug}}"
+    sortable_fields:
+      - "date"
+      - "title"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Slug"
+        name: "slug"
+        widget: "string"
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD HH:mm:ss"
+        date_format: "YYYY-MM-DD"
+        time_format: "HH:mm:ss"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "about"
+        label: "About"
+        file: "source/about/index.md"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+      - name: "moments"
+        label: "Moments"
+        file: "source/moments/index.md"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+      - name: "categories"
+        label: "Categories"
+        file: "source/categories/index.md"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Body"
+            name: "body"
+            widget: "markdown"

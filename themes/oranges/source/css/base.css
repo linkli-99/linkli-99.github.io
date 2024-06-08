@@ -27,9 +27,26 @@ body.hidden {
   color: var(--color-text-md-content)
 }
 
+.about-body {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-body img.right-image {
+  width: 325px;
+  margin: 20px auto;
+  height: auto; /* Ensure the image doesn't overflow the container */
+}
+
 @media (max-width: 768px) {
   .markdown-body {
     font-size: 1.4rem;
+  }
+
+  .about-body {
+    display: block;
+    text-align: center;
   }
 }
 
@@ -171,6 +188,11 @@ a:hover {
   .tag-index .tag-list,
   .about-index .markdown-body {
     padding: 0 20px;
+  }
+
+  .about-body{
+    display: block;
+    text-align: center;
   }
 }
 
@@ -696,4 +718,95 @@ a:hover {
   font-size: 1rem;
   line-height: 1rem;
   white-space: nowrap;
+}
+
+.moments-index {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.moment-item {
+  position: relative;
+  padding-top: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.moment-item:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive layout for different screen sizes */
+@media (max-width: 768px) {
+  .moments-index {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Auto-adjusting grid layout for larger screens */
+@media (min-width: 769px) {
+  .moments-index {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* Fullscreen modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
 }
