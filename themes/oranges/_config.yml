@@ -133,29 +133,17 @@ footer:
 
     # 按需取消注释以启用
     -
-      name: github
+      name: Github
       icon: github
-      path: https://github.com/zchengsite/hexo-theme-oranges
+      path: https://github.com/linkli-99
     # -
     #   name: email
     #   icon: envelope
     #   path: 
-    # -
-    #   name: facebook
-    #   icon: facebooksquare
-    #   path:
-    # -
-    #   name: twitter
-    #   icon: twitter
-    #   path:
-    # -
-    #   name: wechat
-    #   icon: wechat
-    #   path:
-    # -
-    #   name: weibo
-    #   icon: weibo
-    #   path:
+    -
+      name: Linkedin
+      icon: linkedin
+      path: https://www.linkedin.com/in/linkai-li-503620145/
     # -
     #   # rss需安装 hexo-generator-feed 插件
     #   # 具体参照https://github.com/hexojs/hexo-generator-feed
@@ -169,7 +157,7 @@ footer:
     # 如：{thisYear} 会被替换为今年年份
     -
       name: Copyright © {thisYear} Linkai Li
-      path: https://github.com/zchengsite/hexo-theme-oranges
+      path: https://github.com/linkli-99
     -
       name: Theme by Oranges | Powered by Hexo
       path: https://github.com/zchengsite/hexo-theme-oranges
