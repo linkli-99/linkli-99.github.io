@@ -194,6 +194,7 @@ a:hover {
     display: block;
     text-align: center;
   }
+
 }
 
 .post-item {
@@ -346,6 +347,9 @@ a:hover {
   .post-navigation {
     padding: 20px 20px;
   }
+  .container {
+    width: 70%;
+  }
 }
 
 .tag-list li {
@@ -359,31 +363,6 @@ a:hover {
   padding: 0 2px;
   border-radius: 2px;
 }
-
-/*.tag-list li .tag-list-link:hover {
-  color: #fff;
-}*/
-
-/*.tag-list li .tag-list-link::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -2px;
-  right: -2px;
-  transition: transform 0.1s linear;
-  background: gray;
-  opacity: 0.8;
-  transform: scaleX(0);
-  transform-origin: right;
-  z-index: -1;
-  border-radius: 2px;
-}
-
-.tag-list li .tag-list-link:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}*/
 
 .tag-list-count, .category-list-count {
   padding: 0 5px;
@@ -588,6 +567,12 @@ a:hover {
   }
 }
 
+@media (min-width: 1200px) {
+  .moments-index {
+    padding: 20px;
+  }
+}
+
 .search-title {
   display: flex;
   justify-content: space-between;
@@ -721,37 +706,40 @@ a:hover {
 }
 
 .moments-index {
-  display: grid;
-  gap: 10px;
-  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   justify-content: center;
+  align-items: stretch;
 }
 
 .moment-item {
-  position: relative;
-  padding-top: 100%;
-  background-size: cover;
-  background-position: center;
+  flex: 1 1 16%;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.2s;
+  min-width: 150px;
+  max-width: 16%;
+  position: relative;
+}
+
+.moment-item:before{
+  content: "";
+  padding-top: 100%;
+  display: block;
+}
+
+.moment-item__image {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .moment-item:hover {
   transform: scale(1.05);
-}
-
-/* Responsive layout for different screen sizes */
-@media (max-width: 768px) {
-  .moments-index {
-      grid-template-columns: 1fr;
-  }
-}
-
-/* Auto-adjusting grid layout for larger screens */
-@media (min-width: 769px) {
-  .moments-index {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
 }
 
 /* Fullscreen modal styles */

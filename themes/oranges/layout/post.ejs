@@ -40,28 +40,30 @@
   <% } %>
 
   
-<% if (page.type === "moments" && page.photos && page.photos.length > 0) { %>
-  <div class="container moments-index">
-    <% page.photos.forEach(function(photo, index) { %>
-      <div class="moment-item" style="background-image: url('<%= photo.thumbnail %>');" data-fullsize="<%= photo.fullsize %>" 
-        data-caption="<%- photo.caption %>"
-        onclick="openFullscreen(this)">
-      </div>
-    <% }) %>
-  </div>
-
-  <!-- Fullscreen modal for images -->
-  <div id="fullscreenModal" class="modal">
-    <span class="close" onclick="closeFullscreen()">&times;</span>
-    <img class="modal-content" id="fullscreenImage">
-    <div id="caption"></div>
-  </div>
-
-<% } else if (page.type === "moments") { %>
-  <div class="container moments-index">
-    <p>No photos available.</p>
-  </div>
-<% } %>
+  <% if (page.type === "moments" && page.photos && page.photos.length > 0) { %>
+    <div class="container moments-index">
+      <% page.photos.forEach(function(photo, index) { %>
+        <div class="moment-item">
+          <img src="<%= photo.thumbnail %>" alt="Moment Image" class="moment-item__image"
+            data-fullsize="<%= photo.fullsize %>" 
+            data-caption="<%- photo.caption %>"
+            onclick="openFullscreen(this)">
+        </div>
+      <% }) %>
+    </div>
+  
+    <!-- Fullscreen modal for images -->
+    <div id="fullscreenModal" class="modal">
+      <span class="close" onclick="closeFullscreen()">&times;</span>
+      <img class="modal-content" id="fullscreenImage">
+      <div id="caption"></div>
+    </div>
+  
+  <% } else if (page.type === "moments") { %>
+    <div class="container moments-index">
+      <p>No photos available.</p>
+    </div>
+  <% } %>
 
   <% if (!page.type) { %>
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
