@@ -103,3 +103,12 @@ theme: oranges
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# Lazy Load
+## Docs: https://github.com/Troy-Yang/hexo-lazyload-image
+lazyload:
+  enable: true
+  onlypost: false # optional
+  loadingImg: # optional eg ./images/loading.gif
+  isSPA: false # optional
+  preloadRatio: 3 # optional, default is 1

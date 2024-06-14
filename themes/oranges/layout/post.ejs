@@ -44,19 +44,11 @@
     <div class="container moments-index">
       <% page.photos.forEach(function(photo, index) { %>
         <div class="moment-item">
-          <img src="<%= photo.thumbnail %>" alt="Moment Image" class="moment-item__image"
-            data-fullsize="<%= photo.fullsize %>" 
-            data-caption="<%- photo.caption %>"
-            onclick="openFullscreen(this)">
+          <a href="<%= photo.fullsize %>" data-fancybox="moments" data-caption="<%- photo.caption %>">
+            <img src="<%= photo.thumbnail %>" alt="<%- photo.caption %>" class="moment-item__image">
+          </a>
         </div>
       <% }) %>
-    </div>
-  
-    <!-- Fullscreen modal for images -->
-    <div id="fullscreenModal" class="modal">
-      <span class="close" onclick="closeFullscreen()">&times;</span>
-      <img class="modal-content" id="fullscreenImage">
-      <div id="caption"></div>
     </div>
   
   <% } else if (page.type === "moments") { %>
@@ -173,8 +165,6 @@
       </div>
     <% } %>
   </div>
-  <!-- <%- js(['/js/modal.js']) %> -->
 <% } %>
-<script src="<%= url_for('/js/modal.js') %>"></script>
 
 
