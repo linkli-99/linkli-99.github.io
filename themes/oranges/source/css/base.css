@@ -741,3 +741,15 @@ a:hover {
 .moment-item:hover {
   transform: scale(1.05);
 }
+
+.fancybox-caption {
+  font-style: italic;
+}
+
+.fancybox-caption div {
+  text-align: left;
+}
+
+.moment-figcaption {
+  display: none;
+}

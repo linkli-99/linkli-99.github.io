@@ -44,8 +44,19 @@
     <div class="container moments-index">
       <% page.photos.forEach(function(photo, index) { %>
         <div class="moment-item">
-          <a href="<%= photo.fullsize %>" data-fancybox="moments" data-caption="<%- photo.caption %>">
-            <img src="<%= photo.thumbnail %>" alt="<%- photo.caption %>" class="moment-item__image">
+          <a href="<%= photo.fullsize %>" data-fancybox="moments">
+            <img src="<%= photo.thumbnail %>" alt="<%- photo.caption.event %>" class="moment-item__image">
+            <figcaption class="moment-figcaption">
+            <% if (photo.caption.date) { %>
+              <div><strong>Date:</strong> <%= photo.caption.date %></div>
+            <% } %>
+            <% if (photo.caption.location) { %>
+              <div><strong>Location:</strong> <%= photo.caption.location %></div>
+            <% } %>
+            <% if (photo.caption.moment) { %>
+              <div><strong>Moment:</strong> <%= photo.caption.moment %></div>
+            <% } %>
+          </figcaption>
           </a>
         </div>
       <% }) %>

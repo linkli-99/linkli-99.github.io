@@ -8,7 +8,6 @@ let fancyTimer = setInterval(function(){
       if($(this).parent().get(0).tagName.toLowerCase() === "a") {
         return;
       }
-      // $(this).attr("data-fancybox", "gallery"); // if you add 'data-fancybox', img will display after showed
       var element = document.createElement("a");
       $(element).attr("data-fancybox", "gallery");
       $(element).attr("style", "text-decoration: none; outline: none; border: 0px none transparent;");
@@ -19,6 +18,18 @@ let fancyTimer = setInterval(function(){
         $(element).attr("href", $(this).attr("src"));
       }
       $(this).wrap(element);
+    });
+
+    //Initialize fancybox with caption
+    $("[data-fancybox='moments']").fancybox({
+      infobar: false,
+      buttons: [
+        "close"
+      ],
+      protect: true,
+      caption: function(instance, slide) {
+        return $(slide.opts.$orig).find("figcaption").html();
+      },
     });
 
     clearInterval(fancyTimer);
