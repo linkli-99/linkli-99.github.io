@@ -90,7 +90,7 @@ photos:
     fullsize: /images/moments/fullsize/16.jpg
     caption:
       date: "2023/08"
-      location: "Artist Point, Washington"
+      location: "Artist Point, Mt. Baker, Washington"
       moment: "Captured during the Perseids meteor shower."
   - thumbnail: /images/moments/thumbnails/17.jpg
     fullsize: /images/moments/fullsize/17.jpg

@@ -86,7 +86,7 @@ navbar:
     key: home
   -
     name: Categories
-    enable: true
+    enable: false
     path: /categories/
     key: categories
   -
