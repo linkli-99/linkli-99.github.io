@@ -78,6 +78,9 @@
           <i class="iconfont icon-updatetime mr-10" title="<%= __('updateTime') %>"></i>
           <%- page.updated.format("YYYY-MM-DD HH:mm:ss") %>
         </span>
+        <% if(theme.word_count){ %>
+            <%- partial('_partial/word') %>
+          <% } %>
         <% for(item of theme.navbar) {
           if (item.key === 'tags' && item.enable) {
             if(page.tags && page.tags.length > 0) { %>
