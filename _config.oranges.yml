@@ -132,10 +132,10 @@ footer:
     # path: 地址
 
     # 按需取消注释以启用
-    -
-      name: Github
-      icon: github
-      path: https://github.com/linkli-99
+    # -
+    #   name: Github
+    #   icon: github
+    #   path: https://github.com/linkli-99
     # -
     #   name: email
     #   icon: envelope
@@ -157,7 +157,7 @@ footer:
     # 如：{thisYear} 会被替换为今年年份
     -
       name: Copyright © {thisYear} Linkai Li
-      path: https://github.com/linkli-99
+      # path: https://github.com/linkli-99
     -
       name: Theme by Oranges | Powered by Hexo
       path: https://github.com/zchengsite/hexo-theme-oranges

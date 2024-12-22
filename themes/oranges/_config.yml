@@ -86,7 +86,7 @@ navbar:
     key: home
   -
     name: Categories
-    enable: true
+    enable: false
     path: /categories/
     key: categories
   -
@@ -132,10 +132,10 @@ footer:
     # path: 地址
 
     # 按需取消注释以启用
-    -
-      name: Github
-      icon: github
-      path: https://github.com/linkli-99
+    # -
+    #   name: Github
+    #   icon: github
+    #   path: https://github.com/linkli-99
     # -
     #   name: email
     #   icon: envelope
@@ -157,7 +157,7 @@ footer:
     # 如：{thisYear} 会被替换为今年年份
     -
       name: Copyright © {thisYear} Linkai Li
-      path: https://github.com/linkli-99
+      # path: https://github.com/linkli-99
     -
       name: Theme by Oranges | Powered by Hexo
       path: https://github.com/zchengsite/hexo-theme-oranges
@@ -217,6 +217,7 @@ codeBlock:
 mathjax:
   enable: true
 
+word_count: true
 # cdn配置，默认关闭，如需启动，先确保对应插件版本cdn资源可用后再开启
 # 如资源加载失败，可替换cdn提供商或设置enable:false默认走本地资源
 # 也可使用自己的cdn服务，资源在/theme/oranges/source/plugins下

@@ -753,3 +753,8 @@ a:hover {
 .moment-figcaption {
   display: none;
 }
+
+.about-caption {
+  background-color: transparent;
+  color: var(--color-text-md-content);
+}

@@ -5,4 +5,4 @@ type: about
 ---
 # About Me
 
-Hey! Welcome to Linkai's personal space. I'm currently a worker at Microsoft. Before that, I've worked in both Flexport on customs automation and Paulson Institute's digital think tank, MacroPolo, on de-globalization research. I graduated from University of Michigan in 2022 where I studied Computer Science.
+Hey! Welcome to my personal space, where I occasionally post random stuff:) Currently, I'm a worker at Microsoft. Before that, I worked as an engineer at Flexport and later at Paulson Institute's think tank, MacroPolo, where I conducted research on geopolitics and trade. I graduated from University of Michigan in 2022 where I studied Computer Science.
