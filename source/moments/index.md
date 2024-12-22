@@ -7,8 +7,7 @@ photos:
     fullsize: /images/moments/fullsize/1.jpg
     caption:
       date: "2016/07"
-      location: "Pyongyang, North Korea"
-      moment: "The tour guide took us to see the 'Future Galaxy Tower' apartment, built for scientists, on the first night of our trip."
+      location: "Korean Demilitarized Zone(DMZ), North Korean Side"
   - thumbnail: /images/moments/thumbnails/2.jpg
     fullsize: /images/moments/fullsize/2.jpg
     caption:
@@ -124,5 +123,4 @@ photos:
     caption:
       date: "2024/05"
       location: "Anacortes, Washington"
-      moment: "Everyone around us was shocked when this moment began. Even the naked eye could see the dancing purple colors in the sky."
 ---
