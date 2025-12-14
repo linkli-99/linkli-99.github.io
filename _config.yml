@@ -4,16 +4,16 @@
 
 # Site
 title: Nonsenses made by Linkai
-subtitle: ''
-description: ''
-keywords:
+subtitle: 'Personal thoughts and moments'
+description: 'A personal portfolio and blog by Linkai Li, featuring writings on finance, geopolitics, and photography moments from around the world.'
+keywords: Linkai Li, portfolio, blog, photography, finance, geopolitics
 author: Linkai Li
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://notlinkaili.com
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:

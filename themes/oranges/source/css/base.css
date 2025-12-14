@@ -722,6 +722,22 @@ a:hover {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .moment-item {
+    flex: 1 1 30%;
+    max-width: 30%;
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .moment-item {
+    flex: 1 1 45%;
+    max-width: 45%;
+    min-width: 80px;
+  }
+}
+
 .moment-item:before{
   content: "";
   padding-top: 100%;

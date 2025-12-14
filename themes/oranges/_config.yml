@@ -143,7 +143,8 @@ footer:
     -
       name: Linkedin
       icon: linkedin
-      path: https://www.linkedin.com/in/linkai-li-503620145/
+      path: https://www.linkedin.com/in/linkai-l-503620145/
+
     # -
     #   # rss需安装 hexo-generator-feed 插件
     #   # 具体参照https://github.com/hexojs/hexo-generator-feed

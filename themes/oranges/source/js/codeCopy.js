@@ -5,7 +5,7 @@ let clipboard = null
 
 // 获取code block dom
 function getCodeBlockDoms() {
-  const codeBlockDoms = document.querySelectorAll('figure')
+  const codeBlockDoms = document.querySelectorAll('figure.highlight')
   const copyIcon = document.createElement('i')
   copyIcon.classList = 'iconfont icon-copy'
   const copyBtn = document.createElement('span')
