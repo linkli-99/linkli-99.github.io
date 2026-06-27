@@ -27,26 +27,9 @@ body.hidden {
   color: var(--color-text-md-content)
 }
 
-.about-body {
-  display:flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.about-body img.right-image {
-  width: 325px;
-  margin: 20px auto;
-  height: auto; /* Ensure the image doesn't overflow the container */
-}
-
 @media (max-width: 768px) {
   .markdown-body {
     font-size: 1.4rem;
-  }
-
-  .about-body {
-    display: block;
-    text-align: center;
   }
 }
 
@@ -103,11 +86,25 @@ a:hover {
   margin: 0 auto;
 }
 
+.about-index {
+  width: 90%;
+  max-width: 680px;
+}
+
+.about-body {
+  display: block;
+}
+
+.about-index .markdown-body {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 0 56px;
+}
+
 .index .post-list,
 .friend-index .friend-list,
 .archives .post-list,
-.tag-index .tag-list,
-.about-index .markdown-body {
+.tag-index .tag-list {
   padding: 0 40px;
 }
 
@@ -126,8 +123,7 @@ a:hover {
   .index .post-list,
   .friend-index .friend-list,
   .archives .post-list,
-  .tag-index .tag-list,
-  .about-index .markdown-body {
+  .tag-index .tag-list {
     padding: 0;
   }
   .category-index .category-list {
@@ -185,16 +181,9 @@ a:hover {
   .index .post-list,
   .friend-index .friend-list,
   .archives .post-list,
-  .tag-index .tag-list,
-  .about-index .markdown-body {
+  .tag-index .tag-list {
     padding: 0 20px;
   }
-
-  .about-body{
-    display: block;
-    text-align: center;
-  }
-
 }
 
 .post-item {
@@ -768,11 +757,6 @@ a:hover {
 
 .moment-figcaption {
   display: none;
-}
-
-.about-caption {
-  background-color: transparent;
-  color: var(--color-text-md-content);
 }
 
 .sr-only {
