@@ -4,7 +4,7 @@
       name: '{thisYear}',
       desc: '今年年份',
       func: () => {
-        return new Date().getFullYear()
+        return `<span data-current-year>${new Date().getFullYear()}</span>`
       }
     }
   ]
@@ -53,3 +53,8 @@
     </div>
   <% } %>
 </div>
+<script>
+  document.querySelectorAll('[data-current-year]').forEach(function (element) {
+    element.textContent = new Date().getFullYear()
+  })
+</script>
